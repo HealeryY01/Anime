@@ -1,0 +1,89 @@
+body {
+  background-color: #f8b4d9;
+}
+
+h1 {
+  font-family: "Chewy", display;
+  font-weight: 600;
+  font-size: 74px;
+  color: #ffffff !important;
+  text-shadow: 0.07em 0.07em 0em #000000;
+}
+
+.btn-custom {
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 32px;
+  font-size: 22px;
+  font-family: "Syne", Helvetica, Arial, sans-serif !important;
+  background-image: linear-gradient(151deg, #ec2f8b 0%, #dd2e89 100%);
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+}
+
+.btn-custom:hover {
+  box-shadow: 8px 15px 30px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+.card-container {
+  perspective: 1500px; /* tạo chiều sâu 3D */
+  display: inline-block;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 450px;
+  border-radius: 24px;
+  overflow: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  background: #222; /* thêm nền tối nếu còn viền nhỏ */
+}
+
+.wrapper {
+  position: absolute;
+  perspective: 1500px; /* tạo chiều sâu 3D */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.card-bg {
+  position: absolute;
+  top: -6%;
+  left: -6%;
+  width: 112%;
+  height: 112%;
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.8s ease;
+  will-change: transform;
+  z-index: 1;
+}
+
+.card-character {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  width: 90%;
+  z-index: 2;
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Hover effect */
+.card-container:hover .card {
+  transform: rotateX(20deg) translateY(-20px);
+}
+
+.card-container:hover .card-bg {
+  filter: brightness(0.9);
+  transform: scale(1.08);
+}
+
+.card-container:hover .card-character {
+  transform: translateX(-50%) translateY(-70px) scale(1.35);
+  opacity: 1; /* nhân vật bật ra rõ hơn */
+}
