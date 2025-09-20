@@ -1,55 +1,56 @@
+/* Global */
 body {
-  background-color: #eda8c2; /* màu hồng nhạt */
+  background-color: #eda8c2; /* nền hồng nhạt */
 }
+
 h1 {
   font-family: "Chewy", display;
   font-weight: 600;
   font-size: 74px;
-  color: #ffffff !important;
+  color: #fff !important;
   letter-spacing: 1px;
   line-height: 1.2em;
   text-align: left;
-  text-shadow: 0.07em 0.07em 0em #000000;
+  text-shadow: 0.07em 0.07em 0 #000;
 }
+
+/* Button */
 .btn-custom {
-  color: #ffffff !important;
-  border-width: 0px !important;
-  border-color: rgba(255, 255, 255, 0.68);
-  border-radius: 32px;
-  font-size: 22px;
-  font-family: "Syne", Helvetica, Arial, Lucida, sans-serif !important;
-  background-image: linear-gradient(151deg, #ec2f8b 0%, #dd2e89 100%);
-  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.3);
-  z-index: 100;
   display: inline !important;
   max-width: 160px !important;
+  font-size: 22px;
+  font-family: "Syne", Helvetica, Arial, Lucida, sans-serif !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 32px;
+  background: linear-gradient(151deg, #ec2f8b 0%, #dd2e89 100%);
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
 .btn-custom:hover {
   border: 2px solid transparent;
-  box-shadow: 8px 15px 30px 0px rgba(0, 0, 0, 0.3);
-  background-color: hsla #ffffff33 (0, 0%, 100%, 0.2);
+  box-shadow: 8px 15px 30px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Card 3D */
 .card-container {
   position: relative;
   width: 100%;
   height: 400px;
   perspective: 1500px;
 }
-
 .card {
   width: 100%;
   height: 106.5%;
   border-radius: 18px;
+  background: #221d1d;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
   border: none;
-  overflow: hidden; /* Cắt ảnh ra theo bo góc */
-  background-color: #221d1dff; /* Nền đen bên trong để khớp */
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6); /* Bóng mềm hơn */
+  overflow: hidden;
   transition: transform 0.5s ease, filter 0.5s ease, box-shadow 0.5s ease;
   transform-style: preserve-3d;
 }
-
-/* lớp overlay gradient */
 .card::before {
   content: "";
   position: absolute;
@@ -58,194 +59,143 @@ h1 {
   background: linear-gradient(
     to bottom,
     rgba(10, 10, 10, 1) 5%,
-    /* tối đầu */ rgba(12, 8, 8, 0.7) 20%,
-    /* mờ dần */ rgba(0, 0, 0, 0) 40%,
-    /* trong suốt giữa */ rgba(0, 0, 0, 0) 60%,
+    rgba(12, 8, 8, 0.7) 20%,
+    rgba(0, 0, 0, 0) 40% 60%,
     rgba(0, 0, 0, 0.25) 80%,
-    /* mờ dần cuối */ rgba(12, 11, 11, 0.9) 100% /* tối cuối */
+    rgba(12, 11, 11, 0.9) 100%
   );
   opacity: 0;
   transition: opacity 0.5s ease;
-  pointer-events: none; /* để không chặn hover */
+  pointer-events: none;
 }
-
 .card-container:hover .card {
-  transform: rotateX(35deg); /* card nghiêng */
+  transform: rotateX(35deg);
   filter: brightness(0.9);
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.6);
 }
-
 .card-container:hover .card::before {
-  opacity: 1; /* hiện gradient khi hover */
+  opacity: 1;
 }
-
 .card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 18px;
-  display: block;
-}
-
-.card-bg {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  display: block;
 }
-
 .card-character {
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%) translateY(0) scale(1);
   width: 110%;
   z-index: 3;
   pointer-events: none;
-
-  /* Ẩn mặc định */
   opacity: 0;
+  transform: translateX(-50%) scale(1);
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
-
 .card-container:hover .card-character {
-  opacity: 1; /* hiện khi hover */
-  transform: translateX(-50%) translateY(-23px) scale(1.07); /* bay lên */
+  opacity: 1;
+  transform: translateX(-50%) translateY(-23px) scale(1.07);
 }
 
 /* Most Popular Section */
 .most-popular {
   padding: 60px 0;
   background: linear-gradient(135deg, #f5f7ff 0%, #e8ecff 100%);
+  text-align: center;
 }
-
 .most-popular h2 {
   color: var(--dark-color);
   font-size: 2.5rem;
   margin-bottom: 20px;
-  text-align: center;
 }
-
 .most-popular p {
-  text-align: center;
   max-width: 700px;
   margin: 0 auto 50px;
   color: #666;
   font-size: 1.1rem;
   line-height: 1.6;
 }
-
 .lead {
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
   font-size: 18px;
-  line-height: 1.7em;
   font-weight: 500;
-  text-shadow: 0.05em 0.04em 0em #ffffff;
-  padding-top: 0px;
-  padding-bottom: 4px;
-  margin-top: 0px;
-  margin-bottom: 7px;
+  line-height: 1.7em;
+  text-shadow: 0.05em 0.04em 0 #fff;
+  margin: 0 0 7px;
+  padding: 0 0 4px;
 }
 
+/* Deck Card */
 .deck-card {
-  background: #eda8c2;
-  border-radius: 25px;
-  overflow: hidden;
-  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
-  overflow: visible;
-}
-
-.badges {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.sale-badge {
-  position: absolute;
-  background: #ec2f8b;
-  color: white;
-  padding: 3px 8px;
-  font-size: 13px;
-  font-weight: bold;
-  text-align: center;
-  height: 25px;
-  width: 50px;
-  margin-top: 30px;
-  margin-left: -15px;
-  z-index: 10;
-}
-
-.completed-badge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #17a2b8;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-weight: bold;
-  z-index: 10;
-}
-
-.deck-image {
-  height: 300px;
-  overflow: hidden;
+  background: #eda8c2;
   border-radius: 25px;
+  transition: all 0.3s ease;
+  overflow: visible;
   position: relative;
+}
+.deck-image {
+  position: relative;
+  height: 300px;
+  border-radius: 25px;
   overflow: hidden;
 }
-
 .deck-image img {
   width: 100%;
   height: 100%;
-  border-radius: 25px;
   object-fit: cover;
   border-radius: inherit;
 }
-
-/* Hiệu ứng khi hover */
 .deck-image:hover {
-  transform: scale(1.05) translateY(-10px);
+  transform: scale(1.05) translateY(-5px);
 }
-
 .deck-content {
   padding: 10px;
 }
-
 .deck-title {
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 5px;
   color: #2c3e50;
 }
-
 .deck-subtitle {
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
   font-size: 18px;
-  color: #000000 !important;
-  text-shadow: 0.05em 0.05em 0em #f9f9f9;
+  color: #000 !important;
+  text-shadow: 0.05em 0.05em 0 #f9f9f9;
 }
 
+/* Badges */
+.sale-badge {
+  position: absolute;
+  top: 35px;
+  left: -15px;
+  background: #ec2f8b;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  width: 50px;
+  height: 23px;
+  text-align: center;
+  z-index: 10;
+}
+
+/* Rating + Price */
 .rating {
   display: flex;
-  color: #2667ff;
   gap: 1px;
+  margin: -10px 0 5px;
   font-size: 15px;
-  margin-bottom: 5px;
-  margin-top: -10px;
+  color: #2667ff;
 }
 .price {
   display: flex;
   align-items: baseline;
   gap: 4px;
 }
-
 .sale-price {
   font-family: "Chewy", display;
   font-weight: 700;
@@ -253,32 +203,27 @@ h1 {
   color: #6c757d;
   position: relative;
 }
-
 .sale-price::before,
 .sale-price::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  height: 2px;
   background: #6c757d;
-  box-shadow: 0.03em 0.03em 0em #ffffff;
+  box-shadow: 0.03em 0.03em 0 #fff;
 }
-
 .sale-price::before {
   top: 42%;
-  height: 2px; /* gạch ngang trên */
+  height: 2px;
 }
-
 .sale-price::after {
   top: 58%;
-  height: 1.5px; /* gạch ngang dưới */
+  height: 1.5px;
 }
-
 .diamond-price {
   font-family: "Chewy", display;
   font-weight: 700;
   font-size: 18px;
-  color: #000000;
-  text-shadow: 0.05em 0.05em 0em #ffffff;
+  color: #000;
+  text-shadow: 0.05em 0.05em 0 #fff;
 }
