@@ -155,6 +155,7 @@ h1 {
   display: flex;
   flex-direction: column;
   height: 100%;
+  overflow: visible;
 }
 
 .badges {
@@ -197,7 +198,7 @@ h1 {
   overflow: hidden;
   border-radius: 25px;
   position: relative;
-  transition: transform 0.4s ease;
+  overflow: hidden;
 }
 
 .deck-image img {
@@ -205,17 +206,16 @@ h1 {
   height: 100%;
   border-radius: 25px;
   object-fit: cover;
-  transition: transform 0.5s ease;
   border-radius: inherit;
 }
 
 /* Hiệu ứng khi hover */
-.deck-card:hover .deck-image img {
-  transform: scale(1.1);
+.deck-image:hover {
+  transform: scale(1.05) translateY(-10px);
 }
 
 .deck-content {
-  padding: 15px;
+  padding: 10px;
 }
 
 .deck-title {
@@ -233,45 +233,52 @@ h1 {
 }
 
 .rating {
+  display: flex;
   color: #2667ff;
+  gap: 1px;
+  font-size: 15px;
   margin-bottom: 5px;
   margin-top: -10px;
 }
 .price {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  gap: 4px;
 }
 
 .sale-price {
-  position: relative;
   font-family: "Chewy", display;
   font-weight: 700;
   font-size: 18px;
-  color: #666 !important;
-  letter-spacing: 0.5px;
+  color: #6c757d;
+  position: relative;
 }
+
+.sale-price::before,
 .sale-price::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
-  top: 50%; /* nằm giữa chữ */
-  height: 1px; /* độ dày */
-  background: white; /* màu gạch */
-  transform: translateY(-60%);
+  height: 2px;
+  background: #6c757d;
+  box-shadow: 0.03em 0.03em 0em #ffffff;
 }
 
-.original-price {
-  text-decoration: line-through;
-  color: #6c757d;
+.sale-price::before {
+  top: 42%;
+  height: 2px; /* gạch ngang trên */
+}
+
+.sale-price::after {
+  top: 58%;
+  height: 1.5px; /* gạch ngang dưới */
 }
 
 .diamond-price {
   font-family: "Chewy", display;
   font-weight: 700;
   font-size: 18px;
-  color: #000000 !important;
-  letter-spacing: 0.5px;
+  color: #000000;
   text-shadow: 0.05em 0.05em 0em #ffffff;
-  margin-left: 5px;
 }
