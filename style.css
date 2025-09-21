@@ -1,5 +1,5 @@
 body {
-  background-color: #f8b4d9; /* màu hồng nhạt */
+  background-color: #eda8c2; /* màu hồng nhạt */
 }
 h1 {
   font-family: "Chewy", display;
@@ -111,4 +111,167 @@ h1 {
 .card-container:hover .card-character {
   opacity: 1; /* hiện khi hover */
   transform: translateX(-50%) translateY(-23px) scale(1.07); /* bay lên */
+}
+
+/* Most Popular Section */
+.most-popular {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f5f7ff 0%, #e8ecff 100%);
+}
+
+.most-popular h2 {
+  color: var(--dark-color);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.most-popular p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.lead {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 18px;
+  line-height: 1.7em;
+  font-weight: 500;
+  text-shadow: 0.05em 0.04em 0em #ffffff;
+  padding-top: 0px;
+  padding-bottom: 4px;
+  margin-top: 0px;
+  margin-bottom: 7px;
+}
+
+.deck-card {
+  background: #eda8c2;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.sale-badge {
+  position: absolute;
+  background: #ec2f8b;
+  color: white;
+  padding: 3px 8px;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+  height: 25px;
+  width: 50px;
+  margin-top: 30px;
+  margin-left: -15px;
+  z-index: 10;
+}
+
+.completed-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #17a2b8;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.deck-image {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 25px;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.deck-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  border-radius: inherit;
+}
+
+/* Hiệu ứng khi hover */
+.deck-card:hover .deck-image img {
+  transform: scale(1.1);
+}
+
+.deck-content {
+  padding: 15px;
+}
+
+.deck-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #2c3e50;
+}
+
+.deck-subtitle {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 18px;
+  color: #000000 !important;
+  text-shadow: 0.05em 0.05em 0em #f9f9f9;
+}
+
+.rating {
+  color: #2667ff;
+  margin-bottom: 5px;
+  margin-top: -10px;
+}
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.sale-price {
+  position: relative;
+  font-family: "Chewy", display;
+  font-weight: 700;
+  font-size: 18px;
+  color: #666 !important;
+  letter-spacing: 0.5px;
+}
+.sale-price::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%; /* nằm giữa chữ */
+  height: 1px; /* độ dày */
+  background: white; /* màu gạch */
+  transform: translateY(-60%);
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.diamond-price {
+  font-family: "Chewy", display;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000 !important;
+  letter-spacing: 0.5px;
+  text-shadow: 0.05em 0.05em 0em #ffffff;
+  margin-left: 5px;
 }
