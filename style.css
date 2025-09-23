@@ -1,10 +1,13 @@
 /* Global */
 body {
-  /* background-color: #eda8c2; nền hồng nhạt */
+  font-family: Open Sans, Arial, sans-serif;
+  font-size: 14px;
+  color: #666;
+  background-color: #fff;
+  line-height: 1.7em;
+  font-weight: 500;
 }
-.main {
-  background-color: #eda8c2; /* nền hồng nhạt */
-}
+
 h1 {
   font-family: "Chewy", display;
   font-weight: 600;
@@ -86,11 +89,11 @@ h1 {
   border: 1px solid #000000ff;
   border-radius: 50px;
   margin: 10px auto;
-  max-width: 1200px;
-  padding: 10px 30px;
+  max-width: 1300px;
+  padding: 15px 30px;
 
   position: fixed; /* cố định */
-  top: 35px; /* đẩy xuống dưới marquee */
+  top: 30px; /* đẩy xuống dưới marquee */
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 40px);
@@ -112,6 +115,7 @@ h1 {
 
 /* Navigation Menu */
 .nav-menu a {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
   margin: 0 15px;
   font-size: 18px;
   color: #000000;
@@ -123,16 +127,17 @@ h1 {
 
 /* Cart */
 .cart-btn {
-  background: linear-gradient(151deg, #ec2f8b 0%, #dd2e89 100%);
+  background: #e72f8a;
   font-family: Open Sans, Arial, sans-serif;
-  color: #fff;
-  padding: 8px 15px;
+  color: #ffffff;
+  padding: 10px 15px;
   border-radius: 50px;
   position: relative;
   cursor: pointer;
+  font-size: 16px;
 }
 .cart-btn i {
-  margin-right: 5px;
+  margin-right: 12px;
 }
 .cart-badge {
   background-color: #000000;
@@ -144,18 +149,136 @@ h1 {
   font-size: 10px;
   font-weight: 700;
   height: 18px;
-  left: 28px;
+  left: 30px;
   line-height: 17px;
   margin: auto;
   position: absolute;
   text-align: center;
-  top: -32px;
+  top: -30px;
   width: 18px;
 }
 /*chỉnh icon giỏ hàng*/
 .outline {
   color: transparent; /* trong ruột */
   -webkit-text-stroke: 1px white; /* viền trắng */
+}
+
+/*HERO BANNER*/
+.hero-banner {
+  padding: 100px 20px 60px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 10px;
+  text-shadow: 0.07em 0.07em 0 #fff;
+}
+
+.hero-title {
+  font-family: "Chewy", display;
+  font-size: 68px;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0.07em 0.07em 0 #000;
+  margin-bottom: 20px;
+}
+
+/* Rating Stars */
+.rating-stars {
+  font-size: 20px;
+  color: #ffd700; /* vàng sao */
+  margin-bottom: 25px;
+}
+.rating-stars .rating-text {
+  font-size: 15px;
+  margin-left: 8px;
+  color: #000;
+  font-weight: 600;
+}
+
+/* BANNER CARDS */
+.banner-card {
+  background: #fff;
+  padding: 25px 15px;
+  border-radius: 25px;
+  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.banner-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 10px 12px 0 rgba(0, 0, 0, 0.5);
+}
+.banner-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin: 20px 0;
+  color: #000;
+}
+.banner-card .btn-custom {
+  margin-top: 10px;
+  font-size: 16px;
+  padding: 8px 18px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Badge cho card */
+.banner-card .badge {
+  display: inline-block;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+.badge.shopping {
+  background: #9c27b0;
+}
+.badge.hot {
+  background: #ff1744;
+}
+.badge.sale {
+  background: #2196f3;
+}
+
+/* Card đặc biệt Hot Deal */
+.banner-card.hot-deal {
+  background: linear-gradient(135deg, #ec2f8b, #f48fb1);
+  color: #fff;
+}
+.banner-card.hot-deal h3 {
+  color: #fff;
+}
+.banner-card.hot-deal .btn-custom {
+  background: #fff !important;
+  color: #ec2f8b !important;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Main */
+.curve-top {
+  background: #eda8c2;
+  height: 150px;
+  clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+.main {
+  background: #eda8c2;
+  /* nội dung chính */
+}
+
+.curve-bottom {
+  background: #eda8c2;
+  height: 150px;
+  clip-path: ellipse(100% 100% at 50% 0%);
 }
 
 /* Button */
@@ -266,8 +389,9 @@ h1 {
   font-weight: 500;
   line-height: 1.7em;
   text-shadow: 0.05em 0.04em 0 #fff;
-  margin: 0 0 7px;
-  padding: 0 0 4px;
+  margin: -30px 5px 25px;
+  padding: 10px 0 10px;
+  color: #000000;
 }
 
 /* Deck Card */
@@ -297,7 +421,7 @@ h1 {
   transform: scale(1.05) translateY(-5px);
 }
 .deck-content {
-  padding: 10px;
+  padding: 15px 5px 0px 5px;
 }
 .deck-title {
   font-weight: bold;
@@ -330,9 +454,9 @@ h1 {
 /* Rating + Price */
 .rating {
   display: flex;
-  gap: 1px;
-  margin: -10px 0 5px;
-  font-size: 15px;
+  gap: 0px;
+  margin: -5px 0 5px;
+  font-size: 13px;
   color: #2667ff;
 }
 .price {
@@ -344,7 +468,7 @@ h1 {
   font-family: "Chewy", display;
   font-weight: 700;
   font-size: 18px;
-  color: #6c757d;
+  color: #666;
   position: relative;
 }
 .sale-price::before,
@@ -353,7 +477,7 @@ h1 {
   position: absolute;
   left: 0;
   right: 0;
-  background: #6c757d;
+  background: #666;
   box-shadow: 0.03em 0.03em 0 #fff;
 }
 .sale-price::before {

@@ -1,389 +1,390 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Choose Your Commander</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Chewy&family=Syne:wght@400..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <!-- 1. Thanh thông báo chạy marquee -->
-    <div class="top-marquee">
-      <div class="mask left"></div>
-      <div class="mask right"></div>
-      <div class="marquee-content">
-        💃 Remember Buy 3 Decks Get 1 FREE 🤯 👀 Regular New Releases - Join The
-        Discord To Stay Updated! 👀
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Your Commander</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Syne:wght@400..800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- 1. Thanh thông báo chạy marquee -->
+  <div class="top-marquee">
+    <div class="mask left"></div>
+    <div class="mask right"></div>
+    <div class="marquee-content">
+      💃 Remember Buy 3 Decks Get 1 FREE 🤯 👀 Regular New Releases - Join The
+      Discord To Stay Updated! 👀
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="main-header">
+    <div class="header-container">
+      <!-- Logo -->
+      <div class="logo d-flex align-items-center">
+        <img src="img/LOGO-WHITE-LOTUS-PROXY-BLACK-1.webp" alt="White Lotus Proxy"
+          style="height: 50px; margin-right: 10px" />
+      </div>
+
+      <!-- Navigation -->
+      <nav class="nav-menu">
+        <a href="#">Products</a>
+        <a href="#">About Us</a>
+        <a href="#">Account</a>
+        <a href="#">Contact Us</a>
+      </nav>
+
+      <!-- Cart -->
+      <div class="cart-btn">
+        <i class="fa-solid fa-cart-shopping outline"></i>$0.00
+        <span class="cart-badge">0</span>
       </div>
     </div>
+  </header>
 
-    <!-- Main Header -->
-    <header class="main-header">
-      <div class="header-container">
-        <!-- Logo -->
-        <div class="logo d-flex align-items-center">
-          <img
-            src="img/LOGO-WHITE-LOTUS-PROXY-BLACK-1.webp"
-            alt="White Lotus Proxy"
-            style="height: 50px; margin-right: 10px"
-          />
+  <!-- Banner-->
+  <div class="banner">
+    <div class="hero-banner text-center py-5">
+      <h2 class="hero-subtitle">MTG Proxy Waifu Commander Decks by...</h2>
+      <h1 class="hero-title">White Lotus Proxy</h1>
+
+      <!-- Rating -->
+      <div class="rating-stars my-3">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <span class="rating-text">4.96 rating (1027 reviews)</span>
+      </div>
+
+      <!-- Banner cards -->
+      <div class="row mt-5 justify-content-center">
+        <!-- EDH Decks -->
+        <div class="col-md-4 mb-3">
+          <div class="banner-card">
+            <span class="badge">Shopping</span>
+            <h3>EDH Decks</h3>
+            <p><a href="#" class="btn btn-custom">Explore Decks</a></p>
+          </div>
         </div>
 
-        <!-- Navigation -->
-        <nav class="nav-menu">
-          <a href="#">Products</a>
-          <a href="#">About Us</a>
-          <a href="#">Account</a>
-          <a href="#">Contact Us</a>
-        </nav>
+        <!-- Hot Deal -->
+        <div class="col-md-4 mb-3">
+          <div class="banner-card hot-deal">
+            <span class="badge hot">HOT DEAL</span>
+            <h3>Buy 3 Decks<br>Get 1 Free!</h3>
+            <p><a href="#" class="btn btn-custom">See All</a></p>
+          </div>
+        </div>
 
-        <!-- Cart -->
-        <div class="cart-btn">
-          <i class="fa-solid fa-cart-shopping outline"></i>$0.00
-          <span class="cart-badge">0</span>
+        <!-- New Release -->
+        <div class="col-md-4 mb-3">
+          <div class="banner-card">
+            <span class="badge sale">Sale</span>
+            <h3>New Release</h3>
+            <p><a href="#" class="btn btn-custom">Check it Out</a></p>
+          </div>
         </div>
       </div>
-    </header>
-    <div class="banner"></div>
-    <div class="main">
-      <div class="container py-5">
-        <!-- Header -->
-        <div
-          class="d-flex justify-content-between align-items-center mb-5 section-title"
-        >
-          <h1>Choose Your Commander</h1>
+    </div>
+  </div>
+
+  <!-- Curved Background trên -->
+  <div class="curve-top"></div>
+  <div class="main">
+    <div class="container py-5">
+      <div class="d-flex justify-content-between align-items-center mb-5 section-title">
+        <h1>Choose Your Commander</h1>
+        <button class="btn btn-custom">See All</button>
+      </div>
+
+      <!-- Commander Cards -->
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-6 col-md-3">
+          <div class="card-container">
+            <div class="card">
+              <div class="wrapper">
+                <img src="img/White-Lotus-Proxy-Aeve-Progenitor-Ooze-Full-proxy-anime-waifu-deck-1.webp" alt="Card 1"
+                  class="card-bg" />
+              </div>
+            </div>
+            <img src="img/White-Lotus-Proxy-Aeve-Progenitor-Ooze-Full-proxy-anime-waifu-image-layer.webp"
+              alt="Character" class="card-character" />
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-6 col-md-3">
+          <div class="card-container">
+            <div class="card">
+              <div class="wrapper">
+                <img src="img/White-Lotus-Proxy-Alela-Full-proxy-anime-waifu-deck.webp" alt="Card Background"
+                  class="card-bg" />
+              </div>
+            </div>
+            <img src="img/White-Lotus-Proxy-Alela-Full-proxy-anime-waifu-deck-isolated.webp" alt="Character"
+              class="card-character" />
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-6 col-md-3">
+          <div class="card-container">
+            <div class="card">
+              <div class="wrapper">
+                <img src="img/White-Lotus-Proxy-Ur-dragon-Full-proxy-anime-waifu-deck.webp" alt="Card Background"
+                  class="card-bg" />
+              </div>
+            </div>
+            <img src="img/White-Lotus-Proxy-Ur-Dragon-Full-proxy-anime-waifu-deck-isolated.webp" alt="Character"
+              class="card-character" />
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-6 col-md-3">
+          <div class="card-container">
+            <div class="card">
+              <div class="wrapper">
+                <img src="img/White-Lotus-Proxy-Belakor-Full-proxy-anime-waifu-deck.webp" alt="Card Background"
+                  class="card-bg" />
+              </div>
+            </div>
+            <img src="img/White-Lotus-Proxy-Belakor-Full-proxy-anime-waifu-deck-isolated.webp" alt="Character"
+              class="card-character" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Most Popular Section -->
+      <div class="mt-5 pt-5">
+        <div class="d-flex justify-content-between align-items-center mb-3 section-title">
+          <h1>Most Popular</h1>
           <button class="btn btn-custom">See All</button>
         </div>
 
-        <!-- Commander Cards -->
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-6 col-md-3">
-            <div class="card-container">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="img/White-Lotus-Proxy-Aeve-Progenitor-Ooze-Full-proxy-anime-waifu-deck-1.webp"
-                    alt="Card 1"
-                    class="card-bg"
-                  />
-                </div>
-              </div>
-              <img
-                src="img/White-Lotus-Proxy-Aeve-Progenitor-Ooze-Full-proxy-anime-waifu-image-layer.webp"
-                alt="Character"
-                class="card-character"
-              />
-            </div>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="col-6 col-md-3">
-            <div class="card-container">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="img/White-Lotus-Proxy-Alela-Full-proxy-anime-waifu-deck.webp"
-                    alt="Card Background"
-                    class="card-bg"
-                  />
-                </div>
-              </div>
-              <img
-                src="img/White-Lotus-Proxy-Alela-Full-proxy-anime-waifu-deck-isolated.webp"
-                alt="Character"
-                class="card-character"
-              />
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="col-6 col-md-3">
-            <div class="card-container">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="img/White-Lotus-Proxy-Ur-dragon-Full-proxy-anime-waifu-deck.webp"
-                    alt="Card Background"
-                    class="card-bg"
-                  />
-                </div>
-              </div>
-              <img
-                src="img/White-Lotus-Proxy-Ur-Dragon-Full-proxy-anime-waifu-deck-isolated.webp"
-                alt="Character"
-                class="card-character"
-              />
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="col-6 col-md-3">
-            <div class="card-container">
-              <div class="card">
-                <div class="wrapper">
-                  <img
-                    src="img/White-Lotus-Proxy-Belakor-Full-proxy-anime-waifu-deck.webp"
-                    alt="Card Background"
-                    class="card-bg"
-                  />
-                </div>
-              </div>
-              <img
-                src="img/White-Lotus-Proxy-Belakor-Full-proxy-anime-waifu-deck-isolated.webp"
-                alt="Character"
-                class="card-character"
-              />
-            </div>
-          </div>
+        <div class="mb-3">
+          <p class="lead">
+            Spice up your MTG nights with themed waifu commander decks.
+            Anime-inspired designs for casual players and collectors alike.
+          </p>
         </div>
 
-        <!-- Most Popular Section -->
-        <div class="mt-5 pt-5">
-          <div
-            class="d-flex justify-content-between align-items-center mb-4 section-title"
-          >
-            <h1>Most Popular</h1>
-            <button class="btn btn-custom">See All</button>
+        <div class="row g-5">
+          <!-- Knight Tribal -->
+          <div class="col-md-6 col-lg-3">
+            <div class="deck-card">
+              <div class="sale-badge">SALE!</div>
+              <div class="deck-image">
+                <img src="img/1-600x600.webp" alt="Knight Tribal" />
+              </div>
+              <div class="deck-content">
+                <p class="deck-subtitle">
+                  Knight Tribal MTG Proxy Commander Deck
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="price">
+                  <span class="sale-price">$86.00</span>
+                  <span class="diamond-price">$76.00</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="mb-5">
-            <p class="lead">
-              Spice up your MTG nights with themed waifu commander decks.
-              Anime-inspired designs for casual players and collectors alike.
-            </p>
+          <!-- Goblin Tribal -->
+          <div class="col-md-6 col-lg-3">
+            <div class="deck-card">
+              <div class="sale-badge">SALE!</div>
+              <div class="deck-image">
+                <img src="img/1-600x600 (1).webp" alt="Goblin Tribal" />
+              </div>
+              <div class="deck-content">
+                <p class="deck-subtitle">
+                  Goblin Tribal MTG Proxy Commander Deck
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="price">
+                  <span class="sale-price">$86.00</span>
+                  <span class="diamond-price">$76.00</span>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="row g-5">
-            <!-- Knight Tribal -->
-            <div class="col-md-6 col-lg-3">
-              <div class="deck-card">
-                <div class="sale-badge">SALE!</div>
-                <div class="deck-image">
-                  <img src="img/1-600x600.webp" alt="Knight Tribal" />
+          <!-- Arcades Defenders -->
+          <div class="col-md-6 col-lg-3">
+            <div class="deck-card">
+              <div class="sale-badge">SALE!</div>
+              <div class="deck-image">
+                <img src="img/WLP-Arcades-1-600x600.webp" alt="Arcades Defenders" />
+              </div>
+              <div class="deck-content">
+                <p class="deck-subtitle">
+                  Arcades Walls/Butts Theme MTG Proxy Commander Deck
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-                <div class="deck-content">
-                  <p class="deck-subtitle">
-                    Knight Tribal MTG Proxy Commander Deck
-                  </p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="price">
-                    <span class="sale-price">$86.00</span>
-                    <span class="diamond-price">$76.00</span>
-                  </div>
+                <div class="price">
+                  <span class="sale-price">$76.50</span>
+                  <span class="diamond-price">$64.50</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Goblin Tribal -->
-            <div class="col-md-6 col-lg-3">
-              <div class="deck-card">
-                <div class="sale-badge">SALE!</div>
-                <div class="deck-image">
-                  <img src="img/1-600x600 (1).webp" alt="Goblin Tribal" />
+          <!-- Cat Girl Tribal -->
+          <div class="col-md-6 col-lg-3">
+            <div class="deck-card">
+              <div class="sale-badge">SALE!</div>
+              <div class="deck-image">
+                <img src="img/1-600x600 (2).webp" alt="Cat Girl Tribal" />
+              </div>
+              <div class="deck-content">
+                <p class="deck-subtitle">
+                  Cat Tribal MTG Proxy Commander Deck
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-                <div class="deck-content">
-                  <p class="deck-subtitle">
-                    Goblin Tribal MTG Proxy Commander Deck
-                  </p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="price">
-                    <span class="sale-price">$86.00</span>
-                    <span class="diamond-price">$76.00</span>
-                  </div>
+                <div class="price">
+                  <span class="sale-price">$76.50</span>
+                  <span class="diamond-price">$64.50</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Arcades Defenders -->
-            <div class="col-md-6 col-lg-3">
-              <div class="deck-card">
-                <div class="sale-badge">SALE!</div>
-                <div class="deck-image">
-                  <img
-                    src="img/WLP-Arcades-1-600x600.webp"
-                    alt="Arcades Defenders"
-                  />
+          <!-- Dragon Tribal -->
+          <div class="col-md-6 col-lg-3">
+            <div class="deck-card">
+              <div class="sale-badge">SALE!</div>
+              <div class="deck-image">
+                <img src="img/1-9-600x600.webp" alt="Dragon Tribal" />
+              </div>
+              <div class="deck-content">
+                <p class="deck-subtitle">
+                  The Ur-Dragon Tribal MTG Proxy Commander Deck
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-                <div class="deck-content">
-                  <p class="deck-subtitle">
-                    Arcades Walls/Butts Theme MTG Proxy Commander Deck
-                  </p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="price">
-                    <span class="sale-price">$76.50</span>
-                    <span class="diamond-price">$64.50</span>
-                  </div>
+                <div class="price">
+                  <span class="sale-price">$76.50</span>
+                  <span class="diamond-price">$64.50</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Cat Girl Tribal -->
-            <div class="col-md-6 col-lg-3">
-              <div class="deck-card">
-                <div class="sale-badge">SALE!</div>
-                <div class="deck-image">
-                  <img src="img/1-600x600 (2).webp" alt="Cat Girl Tribal" />
+          <!-- Succubus Tribal -->
+          <div class="col-md-6 col-lg-3">
+            <div class="deck-card">
+              <div class="sale-badge">SALE!</div>
+              <div class="deck-image">
+                <img src="img/1-5-600x600.webp" alt="Succubus Tribal " />
+              </div>
+              <div class="deck-content">
+                <p class="deck-subtitle">
+                  Demon Tribal MTG Proxy Commander Deck
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-                <div class="deck-content">
-                  <p class="deck-subtitle">
-                    Cat Tribal MTG Proxy Commander Deck
-                  </p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="price">
-                    <span class="sale-price">$76.50</span>
-                    <span class="diamond-price">$64.50</span>
-                  </div>
+                <div class="price">
+                  <span class="sale-price">$76.50</span>
+                  <span class="diamond-price">$64.50</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Dragon Tribal -->
-            <div class="col-md-6 col-lg-3">
-              <div class="deck-card">
-                <div class="sale-badge">SALE!</div>
-                <div class="deck-image">
-                  <img src="img/1-9-600x600.webp" alt="Dragon Tribal" />
+          <!-- Vampire Tribal -->
+          <div class="col-md-6 col-lg-3">
+            <div class="deck-card">
+              <div class="sale-badge">SALE!</div>
+              <div class="deck-image">
+                <img src="img/1-600x600 (3).webp" alt="Vampire Tribal" />
+              </div>
+              <div class="deck-content">
+                <p class="deck-subtitle">
+                  Edgar Markov Vampires MTG Proxy Commander Deck
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-                <div class="deck-content">
-                  <p class="deck-subtitle">
-                    The Ur-Dragon Tribal MTG Proxy Commander Deck
-                  </p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="price">
-                    <span class="sale-price">$76.50</span>
-                    <span class="diamond-price">$64.50</span>
-                  </div>
+                <div class="price">
+                  <span class="sale-price">$76.50</span>
+                  <span class="diamond-price">$64.50</span>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- Succubus Tribal -->
-            <div class="col-md-6 col-lg-3">
-              <div class="deck-card">
-                <div class="sale-badge">SALE!</div>
-                <div class="deck-image">
-                  <img src="img/1-5-600x600.webp" alt="Succubus Tribal " />
-                </div>
-                <div class="deck-content">
-                  <p class="deck-subtitle">
-                    Demon Tribal MTG Proxy Commander Deck
-                  </p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="price">
-                    <span class="sale-price">$76.50</span>
-                    <span class="diamond-price">$64.50</span>
-                  </div>
-                </div>
+          <!-- Slime Storm -->
+          <div class="col-md-6 col-lg-3">
+            <div class="deck-card">
+              <div class="sale-badge">SALE!</div>
+              <div class="deck-image">
+                <img src="img/il_1588xN.6555618122_tadd-600x600.webp" alt="Slime Storm" />
               </div>
-            </div>
-
-            <!-- Vampire Tribal -->
-            <div class="col-md-6 col-lg-3">
-              <div class="deck-card">
-                <div class="sale-badge">SALE!</div>
-                <div class="deck-image">
-                  <img src="img/1-600x600 (3).webp" alt="Vampire Tribal" />
+              <div class="deck-content">
+                <p class="deck-subtitle">
+                  Ooze Tribal / Slime Storm MTG Proxy Commander Deck
+                </p>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
                 </div>
-                <div class="deck-content">
-                  <p class="deck-subtitle">
-                    Edgar Markov Vampires MTG Proxy Commander Deck
-                  </p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="price">
-                    <span class="sale-price">$76.50</span>
-                    <span class="diamond-price">$64.50</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slime Storm -->
-            <div class="col-md-6 col-lg-3">
-              <div class="deck-card">
-                <div class="sale-badge">SALE!</div>
-                <div class="deck-image">
-                  <img
-                    src="img/il_1588xN.6555618122_tadd-600x600.webp"
-                    alt="Slime Storm"
-                  />
-                </div>
-                <div class="deck-content">
-                  <p class="deck-subtitle">
-                    Ooze Tribal / Slime Storm MTG Proxy Commander Deck
-                  </p>
-                  <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                  </div>
-                  <div class="price">
-                    <span class="sale-price">$76.50</span>
-                    <span class="diamond-price">$64.50</span>
-                  </div>
+                <div class="price">
+                  <span class="sale-price">$76.50</span>
+                  <span class="diamond-price">$64.50</span>
                 </div>
               </div>
             </div>
@@ -391,6 +392,9 @@
         </div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  </div>
+  <div class="curve-bottom"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
