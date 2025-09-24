@@ -264,23 +264,29 @@ h1 {
 }
 
 /* Main */
-.curve-top {
-  background: #eda8c2;
+/* Curve Top - cong xuống */
+/* .curve-top {
+  background: ffff;
   height: 150px;
-  clip-path: ellipse(100% 100% at 50% 0%);
-}
+  clip-path: ellipse(50% 60% at 50% 0%);
+} */
 
+/* Nội dung */
 .main {
+  position: relative;
   background: #eda8c2;
-  /* nội dung chính */
+  z-index: 1;
 }
 
+/* Curve Bottom - cong lên */
 .curve-bottom {
-  background: #eda8c2;
-  height: 150px;
-  clip-path: ellipse(100% 100% at 50% 0%);
+  /* background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNGOUY5RjkiPjxwYXRoIGQ9Ik0xMjgwIDE0MFYwUzk5My40NiAxNDAgNjQwIDEzOSAwIDAgMCAwdjE0MHoiLz48L2c+PC9zdmc+); */
+  background-size: 100% 100px;
+  bottom: 0;
+  height: 100px;
+  z-index: 1;
+  transform: scale(1, 1);
 }
-
 /* Button */
 .btn-custom {
   display: inline !important;
