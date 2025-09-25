@@ -8,25 +8,7 @@ body {
   font-weight: 500;
 }
 
-h1 {
-  font-family: "Chewy", display;
-  font-weight: 600;
-  font-size: 74px;
-  color: #fff !important;
-  letter-spacing: 1px;
-  line-height: 1.2em;
-  text-align: left;
-  text-shadow: 0.07em 0.07em 0 #000;
-}
-
 /*Header*/
-.banner {
-  height: 750px;
-  background-image: url("img/PETALS-7.webp");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-}
 /* Top Marquee */
 .top-marquee {
   background: #ec2f8b;
@@ -164,128 +146,275 @@ h1 {
 }
 
 /*HERO BANNER*/
-.hero-banner {
-  padding: 100px 20px 60px;
-  text-align: center;
+
+.banner {
+  height: 100vh; /* luôn phủ toàn màn hình */
+  background-image: url("img/PETALS-7.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  padding-top: 35px;
   position: relative;
   z-index: 1;
 }
-
+.hero-banner {
+  flex: 1; /* chiếm hết chiều cao còn lại */
+  padding: 80px 20px 60px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* căn giữa theo chiều dọc */
+}
+.title {
+  padding-top: 150px;
+}
 .hero-subtitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: #000;
+  font-size: 30px;
+  color: #000000;
+  text-align: center;
   margin-bottom: 10px;
   text-shadow: 0.07em 0.07em 0 #fff;
 }
 
 .hero-title {
   font-family: "Chewy", display;
-  font-size: 68px;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: 0.07em 0.07em 0 #000;
-  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 125px;
+  color: #000000 !important;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  text-align: center;
+  text-shadow: 0.04em 0.04em 0em rgba(0, 0, 0, 0.4);
 }
 
 /* Rating Stars */
-.rating-stars {
-  font-size: 20px;
-  color: #ffd700; /* vàng sao */
+.rating-stars img {
+  width: 210px;
+  height: auto;
   margin-bottom: 25px;
-}
-.rating-stars .rating-text {
-  font-size: 15px;
-  margin-left: 8px;
-  color: #000;
-  font-weight: 600;
 }
 
 /* BANNER CARDS */
-.banner-card {
-  background: #fff;
-  padding: 25px 15px;
-  border-radius: 25px;
-  box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.4);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.banner-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 10px 12px 0 rgba(0, 0, 0, 0.5);
-}
-.banner-card h3 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  margin: 20px 0;
-  color: #000;
-}
-.banner-card .btn-custom {
-  margin-top: 10px;
-  font-size: 16px;
-  padding: 8px 18px;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+.banner .row {
+  position: relative;
+  z-index: 10;
+  transform: translateY(40px); /* đè xuống nền hồng */
 }
 
-/* Badge cho card */
-.banner-card .badge {
-  display: inline-block;
-  font-size: 13px;
-  padding: 5px 12px;
-  border-radius: 8px;
-  font-weight: bold;
-  margin-bottom: 10px;
+/* Base card */
+.banner-card {
+  position: relative;
+  border-radius: 24px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 268px;
+  text-align: center;
+  overflow: hidden;
   color: #fff;
 }
-.badge.shopping {
-  background: #9c27b0;
-}
-.badge.hot {
-  background: #ff1744;
-}
-.badge.sale {
-  background: #2196f3;
+
+/* --- Layout modifiers --- */
+.banner-content {
+  position: absolute;
+  width: 100%;
+  padding: 20px;
 }
 
-/* Card đặc biệt Hot Deal */
+/* EDH Decks: all left */
+.banner-content.top-left {
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* Hot Deal: center */
+.banner-content.center {
+  position: absolute;
+  inset: 0; /* phủ toàn bộ card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* badge trên, text giữa, btn dưới */
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+.banner-content.center .badge.hot {
+  background: none; /* bỏ nền trắng */
+  color: #fff; /* chữ trắng */
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 20px 0px 0px 0px;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+}
+.banner-content.center h3 {
+  flex: 1; /* đẩy h3 vào giữa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-content.center a {
+  margin-top: 15px;
+}
+
+/* New Release: split left/right */
+.banner-content.top-split {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.banner-content.top-split .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.banner-content.top-split .right {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* --- Backgrounds --- */
+.banner-image1 {
+  background: url("img/Website-Boxes-3.webp") center/cover no-repeat;
+}
+.banner-image2 {
+  background: url("img/Website-Boxes.webp") center/cover no-repeat;
+}
 .banner-card.hot-deal {
-  background: linear-gradient(135deg, #ec2f8b, #f48fb1);
+  background: linear-gradient(
+    116deg,
+    #ec2f8b 0%,
+    #eb5489 26%,
+    #ec5540 49%,
+    #dd2e89 100%
+  );
+}
+
+/* --- Typography --- */
+.banner-card h3 {
+  font-family: "Chewy", cursive;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
   color: #fff;
 }
 .banner-card.hot-deal h3 {
+  font-size: 40px;
+  text-shadow: 0.08em 0.08em 0 #000;
+}
+
+/* --- Badge --- */
+.badge {
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 12px;
+}
+.badge.shopping {
+  background: #fff;
+  color: #ec2f8b;
+}
+.badge.sale {
+  background: #fff;
+  color: #ec2f8b;
+}
+.badge.hot {
+  background: #fff;
+  color: #ec2f8b;
+  letter-spacing: 1px;
+}
+
+/* --- Buttons --- */
+.btn-banner1 {
+  background: #8300e9;
+  color: #fff !important;
+  border-radius: 32px;
+  padding: 8px 20px;
+}
+.btn-banner1:hover {
+  background: #fff;
+  color: #000 !important;
+}
+
+.btn-banner2 {
+  background: #fff;
+  color: #ec2f8b;
+  border-radius: 32px;
+  padding: 8px 20px;
+}
+.btn-banner2:hover {
+  background: #000;
   color: #fff;
 }
-.banner-card.hot-deal .btn-custom {
-  background: #fff !important;
-  color: #ec2f8b !important;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+
+.btn-banner3 {
+  background: #ec2f8b;
+  color: #fff !important;
+  border-radius: 32px;
+  padding: 8px 20px;
+  margin-top: 83px;
+  margin-right: 63px;
+}
+.btn-banner3:hover {
+  background: #fff;
+  color: #000 !important;
 }
 
 /* Main */
 /* Curve Top - cong xuống */
-/* .curve-top {
-  background: ffff;
-  height: 150px;
-  clip-path: ellipse(50% 60% at 50% 0%);
-} */
+.curve-top {
+  position: relative;
+  margin-top: -165px; /* chỉnh cao/thấp curve ăn vào banner */
+}
 
 /* Nội dung */
 .main {
+  background: #eda8c2; /* nền hồng liền xuống dưới */
+  margin-top: -1px; /* xoá đường line trắng giữa SVG và main */
+  padding-top: 140px;
   position: relative;
-  background: #eda8c2;
-  z-index: 1;
 }
 
 /* Curve Bottom - cong lên */
 .curve-bottom {
-  /* background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNGOUY5RjkiPjxwYXRoIGQ9Ik0xMjgwIDE0MFYwUzk5My40NiAxNDAgNjQwIDEzOSAwIDAgMCAwdjE0MHoiLz48L2c+PC9zdmc+); */
-  background-size: 100% 100px;
-  bottom: 0;
+  position: relative;
+  margin-top: -1px; /* tránh line trắng */
   height: 100px;
-  z-index: 1;
-  transform: scale(1, 1);
+  overflow: hidden;
+  line-height: 0;
+  background: #eda8c2; /* nền hồng liền khối với .main */
+}
+
+.curve-bottom svg .curve-top svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: "Chewy", display;
+  font-weight: 600;
+  font-size: 74px;
+  color: #fff !important;
+  letter-spacing: 1px;
+  line-height: 1.2em;
+  text-align: left;
+  text-shadow: 0.07em 0.07em 0 #000;
 }
 /* Button */
 .btn-custom {
@@ -500,4 +629,93 @@ h1 {
   font-size: 18px;
   color: #000;
   text-shadow: 0.05em 0.05em 0 #fff;
+}
+
+/* Testimonials title */
+.testimonials-title {
+  font-family: "Chewy", cursive;
+  font-size: 50px;
+  text-shadow: 0.05em 0.05em 0 #000;
+}
+
+/* Review box (summary) */
+.review-box {
+  border: 1px solid #cfd9d7;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.star {
+  color: #16a085;
+  font-size: 20px;
+}
+.star.empty {
+  color: #ccc;
+}
+.review-btn {
+  background: #e8f6f3;
+  color: #000;
+  font-weight: 500;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 13px;
+}
+
+/* Individual review cards */
+.review-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  padding: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review-header .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.review-rating .star {
+  font-size: 18px;
+}
+
+.product-box {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-box img {
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+}
+.product-box span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #bbb;
+}
+.carousel-indicators .active {
+  background-color: #16a085;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
 }
