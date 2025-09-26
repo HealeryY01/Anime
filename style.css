@@ -7,7 +7,13 @@ body {
   line-height: 1.7em;
   font-weight: 500;
 }
-
+.wrapper {
+  width: 100%;
+  max-width: 1920px; /* hoặc 1300px nếu muốn gọn hơn */
+  margin: 0 auto;
+  overflow-x: hidden; /* tránh tràn ngang */
+  position: relative;
+}
 /*Header*/
 /* Top Marquee */
 .top-marquee {
@@ -18,18 +24,18 @@ body {
   padding: 5px 0;
   font-size: 16px;
   white-space: nowrap;
-  position: fixed; /* cố định trên cùng */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 35px;
   display: flex;
   align-items: center;
-  z-index: 1000; /* nằm trên cùng */
+  z-index: 1000;
 }
 .marquee-content {
   display: inline-block;
-  padding-left: 100%; /* bắt đầu ngoài màn hình bên phải */
+  padding-left: 100%;
   font-weight: bold;
   font-size: 14px;
   font-family: "Montserrat", sans-serif;
@@ -49,37 +55,35 @@ body {
 .mask {
   position: absolute;
   top: 0;
-  width: 120px; /* chỉnh to/nhỏ theo ý */
+  width: 120px;
   height: 100%;
   background: #ec2f8b;
   z-index: 2;
 }
-
 .mask.left {
   left: 0;
 }
-
 .mask.right {
   right: 0;
 }
 
 /* Main Header */
 .main-header {
-  background: rgba(255, 255, 255, 0.5) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
-  backdrop-filter: blur(200px) !important;
-  border: 1px solid #000000ff;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid #000000;
   border-radius: 50px;
   margin: 10px auto;
   max-width: 1300px;
   padding: 15px 30px;
 
-  position: fixed; /* cố định */
-  top: 30px; /* đẩy xuống dưới marquee */
+  position: fixed;
+  top: 40px; /* cách marquee 1 chút */
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 40px);
-  z-index: 999; /* nổi trên banner */
+  z-index: 999;
 }
 
 .header-container {
@@ -87,7 +91,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 /* Logo */
 .logo h2 {
   font-family: "Montserrat", sans-serif;
@@ -97,10 +100,10 @@ body {
 
 /* Navigation Menu */
 .nav-menu a {
-  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
   margin: 0 15px;
   font-size: 18px;
-  color: #000000;
+  color: #000;
   text-decoration: none;
 }
 .nav-menu a:hover {
@@ -110,34 +113,25 @@ body {
 /* Cart */
 .cart-btn {
   background: #e72f8a;
-  font-family: Open Sans, Arial, sans-serif;
-  color: #ffffff;
-  padding: 10px 15px;
-  border-radius: 50px;
-  position: relative;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 14px;
   cursor: pointer;
-  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
 }
 .cart-btn i {
-  margin-right: 12px;
+  margin-right: 6px;
 }
 .cart-badge {
-  background-color: #000000;
-  border-radius: 12px;
-  bottom: 0;
-  box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.15);
-  color: #fff;
-  display: block;
-  font-size: 10px;
-  font-weight: 700;
-  height: 18px;
-  left: 30px;
-  line-height: 17px;
-  margin: auto;
-  position: absolute;
-  text-align: center;
-  top: -30px;
-  width: 18px;
+  background: #fff;
+  color: #e72f8a;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  margin-left: 8px;
+  font-size: 12px;
 }
 /*chỉnh icon giỏ hàng*/
 .outline {
@@ -146,30 +140,28 @@ body {
 }
 
 /*HERO BANNER*/
-
 .banner {
-  height: 100vh; /* luôn phủ toàn màn hình */
+  height: 860px;
   background-image: url("img/PETALS-7.webp");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  padding-top: 35px;
+  /* chừa khoảng cho header fixed */
+  text-align: center;
   position: relative;
-  z-index: 1;
+  padding-top: 80px;
 }
 .hero-banner {
   flex: 1; /* chiếm hết chiều cao còn lại */
-  padding: 80px 20px 60px;
+  justify-content: flex-start; /* thay vì center */
   text-align: center;
   position: relative;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* căn giữa theo chiều dọc */
+  padding-top: 160px;
 }
-.title {
-  padding-top: 150px;
-}
+
 .hero-subtitle {
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
@@ -198,10 +190,10 @@ body {
 }
 
 /* BANNER CARDS */
-.banner .banners {
+.banners {
   position: relative;
-  z-index: 10;
-  transform: translateY(40px); /* đè xuống nền hồng */
+  z-index: 99; /* cao hơn curve-top */
+  transform: translateY(85px); /* đẩy card xuống, che 1 phần curve */
 }
 
 /* Base card */
@@ -321,7 +313,7 @@ body {
 /* --- Badge --- */
 .badge {
   border-radius: 5px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   padding: 5px 12px;
 }
@@ -378,22 +370,24 @@ body {
 /* Main */
 /* Curve Top - cong xuống */
 .curve-top {
+  margin-top: -80px; /* kéo curve-top ăn vào banner */
   position: relative;
-  margin-top: -165px; /* chỉnh cao/thấp curve ăn vào banner */
+  z-index: 1;
 }
 
 /* Nội dung */
 .main {
   background: #eda8c2; /* nền hồng liền xuống dưới */
-  margin-top: -1px; /* xoá đường line trắng giữa SVG và main */
-  padding-top: 75px;
+  margin-top: -5px; /* xoá đường line trắng giữa SVG và main */
+  padding-top: 90px;
   position: relative;
+  z-index: 1;
 }
 
 /* Curve Bottom - cong lên */
 .curve-bottom {
   position: relative;
-  margin-top: -20px; /* tránh line trắng */
+  margin-top: -1px; /* tránh line trắng */
   height: 100px;
   overflow: hidden;
   line-height: 0;
@@ -644,44 +638,80 @@ h1 {
 }
 /* Review box (summary) */
 .review-box {
-  border: 1px solid #cfd9d7;
+  border: 1px solid #a3d8cd;
   border-radius: 8px;
-  background: #fff;
+  background-color: rgb(255, 255, 255);
+  max-width: 600px;
+  padding: 45px;
+  line-height: normal;
+  margin-left: 95px;
+}
+.fw-bold {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #1f1f1f;
+  margin-bottom: 12px;
 }
 
-.star {
-  color: #16a085;
-  font-size: 20px;
+.star-box {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: url("img/small-star-full.webp") center/contain no-repeat;
+  margin-right: 2px;
 }
-.star.empty {
-  color: #ccc;
-}
+
 .review-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   background: #e8f6f3;
   color: #000;
-  font-weight: 500;
   border-radius: 20px;
-  padding: 3px 10px;
-  font-size: 13px;
+  padding: 5px 12px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 16px;
+}
+.review-icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url("img/logo.svg") center/contain no-repeat;
+}
+.rating-text {
+  font-size: 17px;
+  color: #1f1f1f;
+  margin-top: 8px;
 }
 
-/* Individual review cards */
+/* Swiper container */
+.mySwiper {
+  padding: 20px 0;
+}
+
+/* Card review */
 .review-card {
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  border-radius: 12px;
   background: #fff;
   padding: 15px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Header (avatar + name) */
 .review-header .avatar {
-  width: 40px;
-  height: 40px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
-  background: #ccc;
+  background: #16a085;
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -689,10 +719,13 @@ h1 {
   font-size: 18px;
 }
 
-.review-rating .star {
+/* Rating stars */
+.review-rating {
+  color: #f39c12;
   font-size: 18px;
 }
 
+/* Product info box */
 .product-box {
   border-top: 1px solid #eee;
   padding-top: 10px;
@@ -708,18 +741,33 @@ h1 {
 .product-box span {
   font-size: 14px;
   font-weight: 500;
+  color: #333;
 }
-.carousel-indicators [data-bs-target] {
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #16a085;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Swiper pagination (dấu chấm) */
+.swiper-pagination-bullet {
   width: 10px;
   height: 10px;
-  border-radius: 50%;
-  background-color: #bbb;
+  background: #bbb;
+  opacity: 1;
+  transition: background 0.3s ease;
 }
-.carousel-indicators .active {
-  background-color: #16a085;
-}
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
+.swiper-pagination-bullet-active {
+  background: #16a085;
 }
