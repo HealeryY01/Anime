@@ -125,13 +125,18 @@ body {
   margin-right: 6px;
 }
 .cart-badge {
-  background: #fff;
-  color: #e72f8a;
+  position: absolute;
+  background: #000000;
+  color: #fff;
   font-weight: bold;
-  padding: 2px 6px;
   border-radius: 50%;
   margin-left: 8px;
-  font-size: 12px;
+  font-size: 10px;
+  top: 15px;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
 }
 /*chỉnh icon giỏ hàng*/
 .outline {
@@ -414,7 +419,7 @@ h1 {
 .btn-custom {
   display: inline !important;
   max-width: 160px !important;
-  font-size: 22px;
+  font-size: 25px;
   font-family: "Syne", Helvetica, Arial, Lucida, sans-serif !important;
   color: #fff !important;
   border: none !important;
@@ -495,9 +500,6 @@ h1 {
 }
 
 /* Most Popular Section */
-.pt-6 {
-  padding-top: 6rem !important;
-}
 .lead {
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
   font-size: 18px;
@@ -617,6 +619,9 @@ h1 {
 .testimonials {
   background-color: #f9f9f9 !important;
 }
+.testimonials-left {
+  margin-bottom: -130px;
+}
 .testimonials-title {
   font-family: "Chewy", display;
   font-weight: 600;
@@ -626,6 +631,7 @@ h1 {
   line-height: 1.2em;
   text-align: left;
   text-shadow: 0.04em 0.04em 0em rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
 }
 
 .lead1 {
@@ -648,6 +654,7 @@ h1 {
   padding: 45px;
   line-height: normal;
   margin-left: 95px;
+  margin-top: 45px;
 }
 .fw-bold {
   font-size: 24px;
@@ -696,54 +703,197 @@ h1 {
 
 /* Card review */
 .review-card {
-  border: 1px solid #e0e0e0;
-  background: #fff;
+  border: 1px solid #ebebeb;
+  background: #ffffff;
   padding: 15px;
   min-height: 450px; /* đồng nhất chiều cao */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Avatar */
-.review-header .avatar {
-  width: 45px;
-  height: 45px;
+.review-header {
+  display: flex;
+  padding: 16px 0 16px 0;
+  border-bottom: solid 2px #aaaaaa;
+  margin: 0 10px 0 10px;
+  align-items: center;
+}
+
+.review-avatar {
+  flex-basis: 56px;
+  flex-shrink: 0;
+  margin-right: 16px;
+  position: relative;
+  display: flex;
+}
+
+.avatar-circle img {
+  width: 50px;
+  height: 50px;
+  background: #d1d5db;
   border-radius: 50%;
-  background: #16a085;
-  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #444;
+  font-size: 18px;
+}
+
+.verified-badge {
+  width: 20px;
+  height: 20px;
+  background-color: #31856c;
+  position: absolute;
+  left: 34px;
+  top: 28px;
+  border-radius: 10px;
+  border: 2px solid #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.reviewer {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 7px;
+}
+.reviewer strong {
+  font-family: sans-serif;
+  font-style: normal;
   font-weight: bold;
   font-size: 18px;
-}
-
-/* Rating stars */
-.review-rating {
-  color: #f39c12;
-  font-size: 18px;
-}
-
-/* Product info box */
-.product-box {
-  border-top: 1px solid #eee;
-  padding-top: 10px;
+  line-height: 1.2;
+  color: #203741;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
-.product-box img {
-  width: 50px;
-  height: auto;
+.text-muted {
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  font-size: 16px;
+}
+.text-muted img {
+  height: 16px;
+  width: 16px;
+  display: inline;
+  vertical-align: middle;
+  margin: 0 6px 0 0;
+}
+
+.review-rating {
+  padding: 17px 0 17px 0;
+  display: flex;
+  align-items: center;
+  margin: 0 10px 0 10px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.review-rating .stars {
+  color: #179d82;
+  font-size: 24px;
+}
+
+.review-rating .rating-text {
+  margin: 0 0 0 15px;
+  font-family: sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: #898f92;
+}
+
+.middle-row {
+  font-weight: 500 !important;
+  color: #000000 !important;
+  font-size: 16px !important;
+  padding: 16px;
+  background: #fcfcfc;
+  border: 1px solid #f9f9f9;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-style: normal;
+  line-height: 130%;
+  margin: 0 10px 15px 10px;
+  flex: 1;
+}
+.review-body {
+  margin: 0 0 12px 0;
+  color: #484e51;
+}
+.review-text {
+  font-size: 16px;
+  color: #484e51;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Chỉ hiển thị 2 dòng */
+  -webkit-box-orient: vertical;
+  margin-bottom: -2px;
+}
+
+.review-text.expanded {
+  -webkit-line-clamp: unset; /* Hiện toàn bộ */
+  display: block;
+}
+
+.toggle-btn {
+  display: inline-block;
+  font-size: 13px;
+  color: #2ea3f2;
+  text-decoration: none;
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.review-time {
+  font-weight: 300;
+  font-size: 14px;
+  color: #898f92;
+  margin-top: 15px;
+}
+
+.review-product {
+  border-radius: inherit;
+  display: flex;
+  padding: 10px;
+  margin-top: 10px;
+  line-height: 1;
+  background-color: #f4f4f4;
+}
+.product-box {
+  display: flex;
+  align-items: center;
   border-radius: 4px;
 }
+
+.product-box img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 8px;
+}
+
 .product-box span {
+  margin: auto 0;
+  font-family: Helvetica;
   font-size: 14px;
-  font-weight: 500;
-  color: #333;
+  font-weight: 700;
+  line-height: 21px;
+  color: #222222;
 }
 
 /* Swiper navigation buttons (vuông, đặt ngoài card) */
@@ -793,4 +943,194 @@ h1 {
 }
 .swiper-pagination-bullet-active {
   background: #000; /* active màu đen */
+}
+
+/* New Releases  */
+.new-releases {
+  background-color: #eda8c2 !important;
+}
+
+/* About Us */
+.about-us {
+  padding-bottom: 1px;
+  margin-top: -1px;
+  background-color: #f9f9f9 !important;
+}
+
+/* --- About Above --- */
+.about-above {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 160px;
+  gap: 40px;
+}
+
+.about-left {
+  flex: 1;
+  margin-top: 60px;
+}
+
+.about-left {
+  flex: 1;
+}
+
+/* Tiêu đề + nút */
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+/* Quote + text */
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 145px;
+}
+
+.quote-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #e72f8a; /* hồng */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quote-icon i {
+  color: #fff;
+  font-size: 40px;
+}
+
+.about-content p {
+  font-family: "Syne", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 23px;
+  color: #000000 !important;
+  letter-spacing: 0.5px;
+  line-height: 1.6em;
+  text-align: left;
+}
+
+.about-video {
+  flex: 1;
+  margin-top: 60px;
+}
+
+.about-video iframe {
+  width: 100%;
+  max-width: 600px; /* giống khung YouTube mặc định */
+  aspect-ratio: 16/9; /* giữ đúng tỷ lệ widescreen */
+  height: auto;
+  border-radius: 12px;
+  border: none;
+}
+
+/* --- About Below (FAQ) --- */
+.about-below {
+  display: flex;
+  gap: 50px;
+  border: 1px solid #000;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+/* Left */
+.faq-left {
+  flex: 1;
+  position: relative;
+  margin-top: 15px;
+}
+
+.faq-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 120px; /* tạo khoảng trống cho line */
+}
+
+.faq-subtitle:before {
+  content: "";
+  background: #e3e3e3;
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.faq-left h2 {
+  font-size: 100px;
+  margin-bottom: 20px;
+}
+.faq-left p {
+  font-size: 16px;
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  color: #000000 !important;
+  letter-spacing: 0.5px;
+  line-height: 1.8em;
+}
+
+/* Right */
+.faq-right {
+  flex: 2;
+  margin-left: 100px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.faq-icon {
+  font-size: 25px;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+
+.faq-item.active .faq-icon {
+  opacity: 0; /* icon biến mất */
+  pointer-events: none; /* không còn click được nữa */
+}
+
+.faq-answer {
+  font-family: "Syne", Helvetica, Arial, Lucida, sans-serif;
+  max-height: 0;
+  overflow: hidden;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.active {
+  padding-top: 8px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 10px 0;
+  color: #000000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-above,
+  .about-below {
+    flex-direction: column;
+  }
+
+  .about-video iframe {
+    height: 220px;
+  }
+
+  .faq-left,
+  .faq-right {
+    text-align: left;
+  }
 }
