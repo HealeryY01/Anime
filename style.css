@@ -79,7 +79,7 @@ body {
   padding: 15px 30px;
 
   position: fixed;
-  top: 40px; /* cách marquee 1 chút */
+  top: 40px;
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 40px);
@@ -197,7 +197,7 @@ body {
 /* BANNER CARDS */
 .banners {
   position: relative;
-  z-index: 99; /* cao hơn curve-top */
+  z-index: 99;
   transform: translateY(85px); /* đẩy card xuống, che 1 phần curve */
 }
 
@@ -242,7 +242,7 @@ body {
   text-align: center;
 }
 .banner-content.center .badge.hot {
-  background: none; /* bỏ nền trắng */
+  background: none;
   color: #fff; /* chữ trắng */
   font-size: 16px;
   font-weight: 600;
@@ -500,6 +500,9 @@ h1 {
 }
 
 /* Most Popular Section */
+.most-popular {
+  margin-top: 150px;
+}
 .lead {
   font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
   font-size: 18px;
@@ -634,17 +637,6 @@ h1 {
   margin-bottom: 10px;
 }
 
-.lead1 {
-  line-height: 1.8em;
-  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
-  font-size: 16px;
-  line-height: 1.8em;
-  padding-top: 0px !important;
-  padding-bottom: 0px !important;
-  margin-top: 0px !important;
-  margin-bottom: 33px !important;
-  color: #000000;
-}
 /* Review box (summary) */
 .review-box {
   border: 1px solid #a3d8cd;
@@ -932,17 +924,21 @@ h1 {
 }
 
 /* Swiper pagination (dấu chấm) */
+/* Swiper pagination (dấu chấm) */
 .swiper-pagination-bullet {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   background: #bbb;
   opacity: 1;
   margin: 0 15px !important;
   border-radius: 50%;
   transition: background 0.3s ease;
+  cursor: pointer; /* để hiện bàn tay khi hover */
 }
+
+.swiper-pagination-bullet:hover,
 .swiper-pagination-bullet-active {
-  background: #000; /* active màu đen */
+  background: #000; /* màu đen khi hover hoặc active */
 }
 
 /* New Releases  */
@@ -956,7 +952,19 @@ h1 {
   margin-top: -1px;
   background-color: #f9f9f9 !important;
 }
+.about-us .container {
+  position: relative;
+}
 
+.about-us .container::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #e3e3e3;
+  margin-top: 60px; /* cách trên 30px */
+  margin-bottom: 30px;
+}
 /* --- About Above --- */
 .about-above {
   display: flex;
@@ -1117,20 +1125,306 @@ h1 {
   padding: 10px 0;
   color: #000000;
 }
+/* Latest Blog Updates */
+.blog-section {
+  margin-top: 80px;
+}
 
-/* Responsive */
-@media (max-width: 768px) {
-  .about-above,
-  .about-below {
-    flex-direction: column;
-  }
+.blog-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Comic Neue", cursive;
+}
 
-  .about-video iframe {
-    height: 220px;
-  }
+.blog-subtitle {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #333;
+}
 
-  .faq-left,
-  .faq-right {
-    text-align: left;
-  }
+.blog-list {
+  margin-top: 60px;
+}
+
+.blog-item {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 24px;
+  overflow: hidden;
+  width: 420px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.blog-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0px 0px 30px;
+  transition: opacity 0.3s ease;
+}
+
+.blog-content {
+  padding: 15px 15px 0px 15px;
+}
+
+.blog-heading {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  color: #222222;
+  font-size: 20px;
+  line-height: 1.4em;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.blog-date {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 13px;
+  color: #ec5540;
+  margin-bottom: 10px;
+  line-height: 1.8em;
+}
+
+.blog-description {
+  font-size: 16px;
+  color: #222222;
+}
+
+/* ✅ Hover ảnh → ảnh mờ + heading xanh */
+.blog-image:hover {
+  opacity: 0.6;
+}
+.blog-image:hover + .blog-content .blog-heading {
+  color: #0077b6;
+}
+
+/* ✅ Hover heading → chỉ heading xanh */
+.blog-heading:hover {
+  color: #0077b6;
+  cursor: pointer;
+}
+
+/* gallery */
+.gallery {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery div {
+  flex: 1; /* chia đều 6 cột */
+  overflow: hidden; /* chặn ảnh phóng to tràn ra ngoài */
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* giữ tỉ lệ, cắt dư */
+  display: block;
+  transition: transform 2.3s ease; /* mượt hơn */
+}
+
+.gallery div:hover img {
+  transform: scale(1.3); /* phóng to trong khung */
+}
+
+/* Footer */
+
+.footer {
+  background: #f9f9f9;
+  padding: 100px 60px;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+.features {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+  margin: 30px 0;
+}
+
+.feature-box {
+  flex: 1;
+  padding: 20px 20px 10px;
+  border: 2px solid #000;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.circle-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e72f8a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 12px;
+}
+
+.feature-box h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.feature-box p {
+  font-size: 14px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 50px 0;
+}
+
+/* Logo + mô tả */
+.footer-logo {
+  flex: 2;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.footer-logo img {
+  width: 190px;
+  margin-bottom: 12px;
+}
+
+.footer-logo p {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  line-height: 1.6;
+}
+
+.socials {
+  margin-top: 25px;
+}
+
+.socials a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  margin-right: 10px;
+  border-radius: 50%;
+  background: #e72f8a;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  opacity: 0.8;
+}
+
+/* Cột links */
+.footer-links {
+  display: flex;
+  flex: 3;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 40px;
+}
+
+.footer-links div {
+  min-width: 150px;
+}
+
+.footer-links h4 {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+  color: #000;
+}
+
+.footer-links a {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  display: block;
+  font-size: 13px;
+  color: #000;
+  margin-bottom: 12px;
+  text-decoration: none;
+}
+
+/* Email */
+.footer-contact {
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  margin-top: 40px;
+  color: #000;
+}
+
+.footer-contact i {
+  margin-right: 6px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 13px;
+  margin-top: 20px;
+}
+.payments {
+  background-color: #f4f4f4;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  margin-top: -8px !important;
+  margin-bottom: 20px !important;
+}
+.payments img {
+  height: 32px;
+}
+
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+}
+
+.floating-btn button {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: none;
+  background: #0056a7; /* màu xanh */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+.floating-btn img {
+  width: 30px;
+  height: 30px;
 }
