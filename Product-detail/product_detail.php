@@ -40,16 +40,22 @@
                 </div>
 
                 <!-- Review Section -->
-                <div class="reviews-section collapsed" id="reviewsBlock">
+                <div class="reviews-section">
                     <h3>10 reviews for Goblin Tribal MTG Proxy Commander Deck</h3>
-                    <div class="reviews-list">
+                    <div class="review-list collapsed" id="reviewsBlock">
                         <!-- Review Item-1 -->
                         <div class="review-item">
                             <div class="review-avatar">
                                 <img src="/ANIME-PHP/img/avata-1.jpg" alt="avatar">
                             </div>
                             <div class="review-content">
-                                <div class="review-rating">★★★★★</div>
+                                <div class="review-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
                                 <p class="review-author">
                                     <strong>Anonymous</strong> <span class="verified">(verified owner)</span> – <span class="date">September 30, 2025</span>
                                 </p>
@@ -66,7 +72,13 @@
                                 <img src="/ANIME-PHP/img/avata-1.jpg" alt="avatar">
                             </div>
                             <div class="review-content">
-                                <div class="review-rating">★★★★★</div>
+                                <div class="review-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
                                 <p class="review-author">
                                     <strong>Juan</strong> <span class="verified">(verified owner)</span> – <span class="date">September 28, 2025</span>
                                 </p>
@@ -82,7 +94,13 @@
                                 <img src="/ANIME-PHP/img/avata-1.jpg" alt="avatar">
                             </div>
                             <div class="review-content">
-                                <div class="review-rating">★★★★☆</div>
+                                <div class="review-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star" style="color:#ccc;"></i>
+                                </div>
                                 <p class="review-author">
                                     <strong>Anonymous</strong> <span class="verified">(verified owner)</span> – <span class="date"> September 24, 2025</span>
                                 </p>
@@ -94,7 +112,13 @@
                                 <img src="/ANIME-PHP/img/avata-2.png" alt="avatar">
                             </div>
                             <div class="review-content">
-                                <div class="review-rating">★★★★★</div>
+                                <div class="review-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
                                 <p class="review-author">
                                     <strong>Anonymous </strong> <span class="verified">(verified owner)</span> – <span class="date">September 20, 2025</span>
                                 </p>
@@ -109,7 +133,13 @@
                                 <img src="/ANIME-PHP/img/avata-1.jpg" alt="avatar">
                             </div>
                             <div class="review-content">
-                                <div class="review-rating">★★★★★</div>
+                                <div class="review-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
                                 <p class="review-author">
                                     <strong>Richard Bickmore</strong> <span class="verified">(verified owner)</span> – <span class="date">September 10, 2025</span>
                                 </p>
@@ -124,7 +154,13 @@
                                 <img src="/ANIME-PHP/img/avata-1.jpg" alt="avatar">
                             </div>
                             <div class="review-content">
-                                <div class="review-rating">★★★★☆</div>
+                                <div class="review-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
                                 <p class="review-author">
                                     <strong>Anonymous </strong> <span class="verified">(verified owner)</span> – <span class="date">September 10, 2025</span>
                                 </p>
@@ -139,7 +175,13 @@
                                 <img src="/ANIME-PHP/img/avata-1.jpg" alt="avatar">
                             </div>
                             <div class="review-content">
-                                <div class="review-rating">★★★★★</div>
+                                <div class="review-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
                                 <p class="review-author">
                                     <strong>Shaun H.</strong> <span class="verified">(verified owner)</span> – <span class="date">September 8, 2025</span>
                                 </p>
@@ -153,7 +195,13 @@
                                 <img src="/ANIME-PHP/img/avata-1.jpg" alt="avatar">
                             </div>
                             <div class="review-content">
-                                <div class="review-rating">★★★★★</div>
+                                <div class="review-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
                                 <p class="review-author">
                                     <strong>Emmet</strong> <span class="verified">(verified owner)</span> – <span class="date">September 8, 2025</span>
                                 </p>
@@ -168,7 +216,13 @@
                                 <img src="/ANIME-PHP/img/avata-1.jpg" alt="avatar">
                             </div>
                             <div class="review-content">
-                                <div class="review-rating">★★★★★</div>
+                                <div class="review-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
                                 <p class="review-author">
                                     <strong>Bobby Cotter</strong> <span class="verified">(verified owner)</span> – <span class="date">September 7, 2025</span>
                                 </p>
@@ -184,7 +238,13 @@
                                 <img src="/ANIME-PHP/img/avata-1.jpg" alt="avatar">
                             </div>
                             <div class="review-content">
-                                <div class="review-rating">★★★★★</div>
+                                <div class="review-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
                                 <p class="review-author">
                                     <strong>Juan</strong> <span class="verified">(verified owner)</span> – <span class="date">August 31, 2025</span>
                                 </p>
@@ -340,6 +400,103 @@
                 </div>
 
             </div>
+        </div>
+    </div>
+    <div class="pairs container">
+        <h2 class="">Pairs well with</h2>
+        <div class="pairs-well row g-5">
+            <!-- Lathril Elves -->
+            <div class="col-md-6 col-lg-3">
+                <div class="deck-card">
+                    <div class="sale-badge">SALE!</div>
+                    <div class="deck-image no-hover">
+                        <img src="/ANIME-PHP/img/1-7-600x600.webp" alt="Lathril Elves" />
+                    </div>
+                    <div class="deck-content">
+                        <p class="deck-subtitle">Lathril Elves MTG Proxy Commander Deck</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">
+                            <span class="sale-price">$86.00</span>
+                            <span class="diamond-price">$76.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kaalia of the Vast -->
+            <div class="col-md-6 col-lg-3">
+                <div class="deck-card">
+                    <div class="sale-badge">SALE!</div>
+                    <div class="deck-image no-hover">
+                        <img src="/ANIME-PHP/img/WLP-Kaalia-NEW-1-600x600.webp" alt="Kaalia of the Vast" />
+                    </div>
+                    <div class="deck-content">
+                        <p class="deck-subtitle">Kaalia of the Vast MTG Proxy Commander Deck</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">
+                            <span class="sale-price">$86.00</span>
+                            <span class="diamond-price">$76.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Atraxa Infect -->
+            <div class="col-md-6 col-lg-3">
+                <div class="deck-card">
+                    <div class="sale-badge">SALE!</div>
+                    <div class="deck-image no-hover">
+                        <img src="/ANIME-PHP/img/1-4-600x600.webp" alt="Atraxa Infect" />
+                    </div>
+                    <div class="deck-content">
+                        <p class="deck-subtitle">Atraxa Infect MTG Proxy Commander Deck</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">
+                            <span class="sale-price">$76.50</span>
+                            <span class="diamond-price">$64.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dragon Tribal -->
+            <div class="col-md-6 col-lg-3">
+                <div class="deck-card">
+                    <div class="sale-badge">SALE!</div>
+                    <div class="deck-image no-hover">
+                        <img src="/ANIME-PHP/img/1-9-600x600.webp" alt="Dragon Tribal" />
+                    </div>
+                    <div class="deck-content">
+                        <p class="deck-subtitle">
+                            The Ur-Dragon Tribal MTG Proxy Commander Deck
+                        </p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="price">
+                            <span class="sale-price">$76.50</span>
+                            <span class="diamond-price">$64.50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>

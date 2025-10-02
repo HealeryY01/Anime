@@ -2004,40 +2004,41 @@ select:focus {
 }
 
 /* Review Section */
+.reviews-section h3 {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 16px;
+  color: #000000 !important;
+  line-height: 1.6em;
+}
 
-/* Khối tổng reviews */
-.reviews-section {
+/* khối danh sách review, có hiệu ứng mở/đóng */
+.review-list {
   position: relative;
   transition: max-height 0.4s ease;
   overflow: hidden;
 }
 
-.reviews-section.collapsed {
-  max-height: 600px; /* chỉ hiện một phần */
+.review-list.collapsed {
+  max-height: 320px; /* chỉ hiện một phần */
 }
 
-.reviews-section.expanded {
+.review-list.expanded {
   max-height: none; /* mở full */
 }
 
 /* lớp mờ khi bị thu gọn */
-.reviews-section.collapsed::after {
+.review-list.collapsed::after {
   content: "";
   position: absolute;
-  bottom: 50px; /* chừa chỗ cho nút toggle */
+  bottom: 0px; /* chừa chỗ cho nút toggle */
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 80px;
   background: linear-gradient(to top, #fffbfbd2, rgba(255, 255, 255, 0));
   pointer-events: none;
 }
-.reviews-section.expanded::after {
+.review-list.expanded::after {
   display: none;
-}
-
-/* danh sách review */
-.reviews-list {
-  margin-top: 20px;
 }
 
 /* từng review */
@@ -2046,13 +2047,11 @@ select:focus {
   gap: 12px;
   margin-bottom: 20px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #eee;
 }
 
 .review-avatar img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  width: 80px;
+  height: 80px;
 }
 
 .review-content {
@@ -2060,46 +2059,79 @@ select:focus {
 }
 
 .review-rating {
-  color: #f39c12;
-  font-size: 16px;
-  margin-bottom: 4px;
+  color: #0693e3;
+  font-size: 20px;
+  margin-bottom: -8px;
+  margin-left: -3px;
 }
-
 .review-author {
-  font-size: 14px;
-  margin-bottom: 8px;
-  color: #333;
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important;
+  margin-bottom: 5px;
+  color: #000000;
+}
+.review-author strong {
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .review-text {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important;
   font-size: 15px;
   line-height: 1.5;
-  color: #444;
+  color: #000000;
 }
 
 /* nút toggle */
-.toggle-btn {
+.reviews-section .toggle-btn {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif !important;
   display: block;
   text-align: center;
-  margin: 20px auto;
-  font-weight: 600;
-  color: #d33;
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+  margin-top: 8px;
   cursor: pointer;
+  font-weight: 500;
 }
 
 /* add review */
 .add-review {
   margin-top: 30px;
   padding-top: 15px;
-  border-top: 1px solid #eee;
 }
 .add-review h4 {
-  font-size: 16px;
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  color: #000000 !important;
+  font-size: 14px;
   margin-bottom: 5px;
 }
 .add-review p {
   font-size: 14px;
 }
 .add-review a {
-  color: #0073aa;
+  color: #0693e3;
+  text-decoration: none;
+}
+/* Pairs well with */
+.pairs {
+  margin-top: 140px;
+  padding-bottom: 50px;
+}
+.pairs h2 {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 36px;
+  color: #000000 !important;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 40px;
+}
+.pairs-well .deck-card {
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+.no-hover {
+  pointer-events: none;
+}
+.pairs-well .rating {
+  color: #e72f8a;
 }
